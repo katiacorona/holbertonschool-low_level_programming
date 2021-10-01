@@ -3,9 +3,9 @@
  * Auth: Katia Corona
  */
 
-# include <stdio.h>
-# include <time.h>
-# include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point / Assigns a random number to n each time is executed.
