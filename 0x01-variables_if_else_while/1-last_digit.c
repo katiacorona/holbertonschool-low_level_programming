@@ -1,4 +1,4 @@
-/**
+/*
  * File: 1-last_digit.c
  * Auth: Katia Corona
  */
@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point Assigns random number to n and prints the last digit.
+ * main - Assigns random number to n and prints the last digit stored in n.
  *
  * Return: Always 0 (Success)
  */
