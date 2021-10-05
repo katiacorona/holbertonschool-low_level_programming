@@ -15,7 +15,7 @@ int main(void)
 	{
 		for (decenas = centenas + 1; decenas <= 9; decenas++)
 		{
-			for (unidades = decenas +1; unidades <= 9; unidades++)
+			for (unidades = decenas + 1; unidades <= 9; unidades++)
 			{
 				putchar((centenas % 10) + '0');
 				putchar((decenas % 10) + '0');
