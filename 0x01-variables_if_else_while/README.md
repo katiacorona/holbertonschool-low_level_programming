@@ -1,4 +1,4 @@
-#C - Variables, if, else, while
+# C - Variables, if, else, while
 
 0. Assigns a random number to the variable n, and prints out whether it's a positive number, negative number, or zero.
 1. Assigns a random number to the variable n, and prints out the last digit of n.
