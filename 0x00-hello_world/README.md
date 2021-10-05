@@ -12,4 +12,6 @@ Tasks from 4 to 6 are programs that:
 6. Prints the size of various *types* on the computer it is compiled and run on.
 
 Part 7 of this project is a blog post that explains step by step the compilation process.
-Click [here]: https://medium.com/@katiacorona/compiling-c-files-using-the-gcc-92ad6061d032/ "Compiling C files using the GCC" to read the full post in [medium]: https://medium.com/@katiacorona/ "My Profile".
+Click [here][1] to read the full medium post.
+
+[1]: https://medium.com/@katiacorona/compiling-c-files-using-the-gcc-92ad6061d032/ "Compiling C files using the GCC" "Compiling C files using the GCC"
