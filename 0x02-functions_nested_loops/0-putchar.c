@@ -1,10 +1,12 @@
 #include "main.h"
+#include "_putchar.c"
 
 /**
  * main - prints _putchar exactly
  *
  * Return: Always 0 (Success)
  */
+int _putchar(char c);
 
 int main(void)
 {
