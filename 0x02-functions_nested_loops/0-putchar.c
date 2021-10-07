@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "_putchar.h"
 
 /**
  * main - prints _putchar exactly
@@ -7,12 +8,12 @@
  */
 int main(void)
 {
-	char output[8] = "_putchar";
+	char output[9] = "_putchar\n";
 
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < 9; i++)
 	{
-		putchar(output[i]);
+		_putchar(output[i]);
 	}
-	putchar('\n');
+
 	return (0);
 }
