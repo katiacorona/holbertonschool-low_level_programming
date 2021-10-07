@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "_putchar.h"
+#include <_putchar.h>
 
 /**
  * main - prints _putchar exactly
@@ -16,4 +16,9 @@ int main(void)
 	}
 
 	return (0);
+}
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
