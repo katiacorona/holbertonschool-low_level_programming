@@ -1,7 +1,3 @@
-/*
- * File: 3-islower.c
- * Auth: Katia C
- */
 #include <stdio.h>
 #include "main.h"
 
@@ -9,7 +5,7 @@
  * _islower - returns 1 when lowercase and 0 otherwise.
  * @c: takes the character to be evaluated.
  *
- * return: 1 if lowercase, 0 otherwise.
+ * Return: 1 if lowercase, 0 otherwise.
  */
 int _islower(int c)
 {
