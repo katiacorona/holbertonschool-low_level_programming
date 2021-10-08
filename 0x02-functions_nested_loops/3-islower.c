@@ -8,19 +8,18 @@
 /**
  * _islower - returns 1 when lowercase, and 0 otherwise.
  *
- * c - takes the value in ascii for an int type.
+ * @c: takes the character for review.
  *
- * return: Always 0 (Successful)
+ * return: 1 if lowercase, 0 otherwise.
  */
 int _islower(int c)
 {
-	if ((c >= 97) && (c <= 122))
+	if ((c >= a) && (c <= z))
 	{
-		_putchar(1);
+		return(1);
 	}
-	else if ((c >= 65) && (c <= 90))
+	else
 	{
-		_putchar(0);
+		return(0);
 	}
-	return (0);
 }
