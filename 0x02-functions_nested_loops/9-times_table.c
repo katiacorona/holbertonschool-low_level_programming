@@ -15,21 +15,20 @@ void times_table(void)
 		for (f2 = 1; f2 <= 9; f2++)
 		{
 			prod = (f1 * f2);
+			_putchar(',');
+			_putchar(' ');
 
 			if (prod < 10)
 			{
-				_putchar(',');
-				_putchar(' ');
 				_putchar(' ');
 			}
 
 			else
 			{
-				_putchar(',');
-				_putchar(' ');
+				_putchar((prod / 10) + '0');
 			}
 
-			_putchar((prod) + '0');
+			_putchar((prod % 10) + '0');
 		}
 
 		_putchar('\n');
