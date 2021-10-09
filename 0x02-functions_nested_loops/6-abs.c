@@ -4,15 +4,17 @@
 /**
  * _abs: Computes the absolute value of an int.
  *
- * Return: Always 0 (Success).
+ * @n: Takes the integer to be computed.
+ *
+ * Return: The absolute of n.
  */
 int _abs(int)
 {
-	int i;
+	int n;
 	
-	for (i >= 0)
-		return (i);
-	
+	if (num >= 0)
+		return (n);
+
 	else
-		return (-i);
+		return (-n);
 }
