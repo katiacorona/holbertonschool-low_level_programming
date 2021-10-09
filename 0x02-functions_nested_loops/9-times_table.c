@@ -16,14 +16,16 @@ void times_table(void)
 		{
 			prod = (f1 * f2);
 
-			_putchar(',');
-			_putchar(' ');
-
 			if (prod < 10)
+				_putchar(',');
 				_putchar(' ');
-
-			_putchar(prod);
-			_putchar('\n');
+				_putchar(' ');
+			else
+				_putchar(',');
+				_putchar(' ');
 		}
+
+		_putchar(prod);
+		_putchar('\n');
 	}
 }
