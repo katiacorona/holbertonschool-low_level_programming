@@ -8,11 +8,14 @@
  *
  * Return: the value of the last digit.
  */
-int _abs(n);
-
 int print_last_digit(int n)
 {
-	int lastDigit = (_abs(n) % 10);
+	int lastDigit = (n % 10);
+
+	if (n < 0)
+	{
+		n *= (-1);
+	}
 
 	return (lastDigit);
 }
