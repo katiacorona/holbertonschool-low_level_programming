@@ -8,7 +8,7 @@
  *
  * Return: the value of the last digit.
  */
-int _abs(int n);
+void _abs(void);
 
 int print_last_digit(int n)
 {
