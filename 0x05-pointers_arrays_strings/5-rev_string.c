@@ -15,7 +15,7 @@ void rev_string(char *s)
 	{
 		longitud++;
 	}
-	
+
 	for (i = 0; i < (longitud / 2); i++)
 	{
 		temp = s[i];
