@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strcat - appends src string to dest string. Overwrites \0 end of dest.
@@ -18,11 +19,11 @@ char *_strcat(char *dest, char *src)
 	{
 		lenght++;
 	}
-
+/* By now, lenght is the number of characters before the null */
 	for (i = 0; src[i]; i++)
 	{
-		dest[lenght] = src[i];
-		lenght++;
+		dest[lenght++] = src[i];
+/* Adds each character of src string after the 6th character of dest string */
 	}
 	return (dest);
 }
