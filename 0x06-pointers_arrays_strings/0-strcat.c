@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * *_strcat - appends src string to dest string. Overwrites \0 end of dest.
- * 		Then adds \0.
+ * _strcat - appends src string to dest string. Overwrites \0 end of dest.
+ *		Then adds \0.
  *
- * @*dest: points to the string where string will be copied.
- * @*stc: points to the string to be copied.
+ * @dest: points to the string where string will be copied
+ * @src: points to the string to be copied
  *
  * Return: a pointer to the resulting string dest.
  */
