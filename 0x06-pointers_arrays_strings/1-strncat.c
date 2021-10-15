@@ -25,7 +25,6 @@ char *_strncat(char *dest, char *src, int n)
 	for (i = 0; (src[i]) && (i < n); i++)
 	{
 		dest[lenght++] = src[i];
-/* Adds each character of src string after the last not null byte of dest string */
 	}
 	return (dest);
 }
