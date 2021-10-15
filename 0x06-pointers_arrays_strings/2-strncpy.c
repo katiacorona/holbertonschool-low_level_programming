@@ -19,10 +19,16 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		src_lenght++;
 	}
-/* By now, src_lenght is the number of characters before the null */
+
 	for (i = 0; (dest[i]) && (i < n); i++)
 	{
 		dest[i] = src[i];
 	}
+
+	for (i = src_lenght; i < n; i++)
+	{
+		dest[i] = '\0';
+	}
+
 	return (dest);
 }
