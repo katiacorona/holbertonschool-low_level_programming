@@ -10,9 +10,9 @@
 char *cap_string(char *str)
 {
 	int i = 0;
-	char separator = " \t\n,;.!?\"(){}";
-	int n;
+	char separator[n];
 
+	separator[] = " \t\n,;.!?\"(){}";
 	while (str[i])
 	{
 		while ((str[i] >= 'a') && (str[i] <= 'z'))
@@ -20,7 +20,7 @@ char *cap_string(char *str)
 			i++;
 		}
 
-		for (n = 0; (separator[n]) || (i == 0); n++)
+		if (str[i--] == separator[n])
 		{
 			str[i] -= 32;
 		}
