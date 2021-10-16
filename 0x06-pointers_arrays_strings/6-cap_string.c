@@ -9,8 +9,7 @@
  */
 char *cap_string(char *str)
 {
-	int i = 0, n;
-	char sep[] = " \t\n,;.!?\"(){}";
+	int i = 0;
 
 	while (str[i])
 	{
@@ -19,13 +18,15 @@ char *cap_string(char *str)
 			i++;
 		}
 
-		for (n = 0; n <= 13; n++)
+		if (str[i--] == ' ' || str[i--] == '\t' ||
+		    str[i--] == '\n' || str[i--] == ',' ||
+		    str[i--] == ';' || str[i--] == '.' ||
+		    str[i--] == '!' || str[i--] == '?' ||
+		    str[i--] == '"' || str[i--] == '(' ||
+		    str[i--] == ')' || str[i--] == '{' ||
+		    str[i--] == '}' || i == 0)
 		{
-
-			if ((str[i--] == sep[n]) || (i == 0))
-			{
-				str[i] -= 32;
-			}
+			str[i] -= 32;
 		}
 		i++;
 	}
