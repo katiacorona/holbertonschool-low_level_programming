@@ -4,12 +4,12 @@
  * mul - mulpiplies two integers
  * @a: takes the multiplicand
  * @b: takes the multiplier
- * Return: Always 0 (Success)
+ * Return: p, the product of the multiplication
  */
 int mul(int a, int b)
 {
-	int m;
+	int p;
 
-	m = (a * b);
-	return (0);
+	p = (a * b);
+	return (p);
 }
