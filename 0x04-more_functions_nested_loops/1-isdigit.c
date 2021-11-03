@@ -5,7 +5,7 @@
  * @c: takes the character to be evaluated
  * Return: 1 if a digit, 0 otherwise
  */
-int _isdigit(int c);
+int _isdigit(int c)
 {
 	if (c >= 0 && c <= 9)
 	{
