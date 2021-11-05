@@ -1,8 +1,3 @@
 #include <stdio.h>
 
-struct Dog
-{
-	char = *name;
-	float = age;
-	char = *owner;
-};
+struct dog *new_dog(char *name, float age, char *owner);
