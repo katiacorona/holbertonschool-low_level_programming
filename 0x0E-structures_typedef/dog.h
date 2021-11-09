@@ -1,11 +1,11 @@
 /**
- * struct Dog - holds the details of the new doggie
+ * struct dog - holds the details of the new doggie
  * @name: a pointer to the doggie's name
  * @age: doggie's age
  * @owner: name of the doggie's owner
  */
 
-struct Dog
+struct dog
 {
 	char *name;
 	float age;
@@ -13,9 +13,9 @@ struct Dog
 };
 
 /**
- * dog - typedef for Dog struct
+ * dog - typedef for dog struct
  */
 
-typedef struct Dog dog;
+typedef struct dog dog_type;
 
 int _putchar(char);
