@@ -1,3 +1,6 @@
+#ifndef DOG_H
+#define DOG_H
+
 /**
  * struct dog - holds the details of the new doggie
  * @name: a pointer to the doggie's name
@@ -13,9 +16,10 @@ struct dog
 };
 
 /**
- * dog - typedef for dog struct
+ * dog_t - typedef for dog struct
  */
-
-typedef struct dog dog_type;
+typedef struct dog dog_t;
 
 int _putchar(char);
+
+#endif /* DOG_H */
