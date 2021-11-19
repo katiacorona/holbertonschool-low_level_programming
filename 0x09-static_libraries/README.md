@@ -2,7 +2,7 @@
 
 ## File Contents:
 
-- [libholberton.a](./libholberton.a): a user defined C Static Library with the following functions:
+- [libmy.a](./libmy.a): a user defined C Static Library with the following functions:
 
     - `int _putchar(char c);`
     - `int _islower(int c);`
@@ -25,6 +25,6 @@
     - `char *_strpbrk(char *s, char *accept);`
     - `char *_strstr(char *haystack, char *needle);`
 
-- [holberton.h](./holberton.h): contains the header file with all function prototypes.
+- [main.h](./main.h): contains the header file with all function prototypes.
 
 - [create_static_lib.sh](./create_static_lib.sh): a Bash script that creates a static library called liball.a from all the .c files that are in the current directory.
