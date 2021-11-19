@@ -1,6 +1,11 @@
-/* Bit Manipulation */
+#ifndef MAIN_H
+#define MAIN_H
 
-/* Function Prototypes */
+/*
+ * Directory 0x14. C - Bit Manipulation
+ * Contents:	Includes function prototypes for tasks 0 to 5,
+ *		including _putchar function.
+ */
 
 unsigned int binary_to_uint(const char *b);
 
@@ -15,3 +20,5 @@ int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 int _putchar(char c);
+
+#endif /* MAIN_H */
