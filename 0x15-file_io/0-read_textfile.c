@@ -4,8 +4,8 @@
 /**
  * read_textfile - reads a text file and prints it to the POSIX stdout.
  *
- * filename: a pointer to the filename.
- * letters: the number of letters the function should read and print.
+ * @filename: a pointer to the filename.
+ * @letters: the number of letters the function should read and print.
  *
  * Return:	the actual number of letters it could read and print.
  *		if the file cannot be read or opened, return 0.
