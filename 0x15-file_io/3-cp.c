@@ -39,7 +39,7 @@ char *create_buffer(char *file)
 {
 	char *buffer;
 
-	buffer = malloc(1024);
+	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		w_to = write(o_to, buffer, 1024);
+		w_to = write(o_to, buffer, r_from);
 
 		if (o_to == -1 || w_to == -1)
 		{
