@@ -57,7 +57,7 @@ void check97(int args)
 {
 	if (args != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 }
@@ -86,7 +86,16 @@ int main(int argc, char *argv[])
 
 	while (r_from > 0)
 	{
+		if (o_from == -1 || r_from == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+					argv[1]);
+			free(buffer);
+			exit(98);
+		}
+
 		w_to = write(o_to, buffer, 1024);
+		r_from = read(o_from, buffer, 1024);
 
 		if (o_to == -1 || w_to == -1)
 		{
@@ -96,20 +105,11 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 
-		r_from = read(o_from, buffer, 1024);
-
-		if (o_from == -1 || r_from == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-					argv[1]);
-			free(buffer);
-			exit(98);
-		}
-
 		o_to = open(argv[2], O_WRONLY | O_APPEND);
 	}
 
 	free(buffer);
 	close_check(o_from);
+	close_check(o_to);
 	return (0);
 }
