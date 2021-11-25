@@ -92,6 +92,7 @@ int main(int argc, char *argv[])
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 					argv[2]);
+			free(buffer);
 			exit(99);
 		}
 
@@ -105,11 +106,10 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		o_to = open(argv[2], O_RDONLY | O_APPEND);
+		o_to = open(argv[2], O_WRONLY | O_APPEND);
 	}
 
-	close_check(o_from);
-	close_check(o_to);
 	free(buffer);
+	close_check(o_from);
 	return (0);
 }
