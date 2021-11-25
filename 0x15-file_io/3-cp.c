@@ -6,6 +6,10 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+void close_check(int fd);
+char *create_buffer(char *file);
+void check97(int args);
+
 /**
  * close_check - closes a fd and checks if was succesfully closed.
  *
@@ -20,6 +24,41 @@ void close_check(int fd)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
+	}
+}
+
+/**
+ * create_buffer -	creates a buffer allocating up to 1024 bytes,
+ *			and checks if can be written.
+ *
+ * @file: a pointer to the file where buffer bytes will be allocated.
+ *
+ * Return: a pointer to the buffer.
+ */
+char *create_buffer(char *file)
+{
+	char *buffer;
+
+	buffer = malloc(sizeof(char) * 1024);
+	if (buffer == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+		exit(99);
+	}
+	return (buffer);
+}
+
+/**
+ * check97 - checks if the number of arguments equals 3.
+ *
+ * @args: the number of arguments passed to the function.
+ */
+void check97(int args)
+{
+	if (args != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
+		exit(97);
 	}
 }
 
@@ -39,16 +78,11 @@ int main(int argc, char *argv[])
 	int o_from, o_to, r_from, w_to;
 	char *buffer;
 
-	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-
+	check97(argc);
 	o_from = open(argv[1], O_RDONLY);
-	buffer = malloc(sizeof(char) * 1024);
+	buffer = create_buffer(argv[2]);
 	r_from = read(o_from, buffer, 1024);
-
+	o_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (o_from == -1 || r_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
@@ -56,9 +90,6 @@ int main(int argc, char *argv[])
 		free(buffer);
 		exit(98);
 	}
-
-	o_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
 	while (r_from > 0)
 	{
 		w_to = write(o_to, buffer, 1024);
