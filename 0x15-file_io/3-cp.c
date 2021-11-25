@@ -7,7 +7,7 @@
 #include <sys/stat.h>
 
 /**
- * check_close - closes a fd and checks if was succesfully closed.
+ * close_check - closes a fd and checks if was succesfully closed.
  *
  * @fd: the file descriptor.
  */
