@@ -6,18 +6,19 @@
  *
  * @str: a pointer to the string to be copied.
  *
- * Return: a pointer to the duplicate string; NULL if it str = NULL.
+ * Return: a pointer to the duplicate string;
+ *		NULL if it str = NULL, or if memory is insufficient.
  */
-char *_strdup(char *str);
+char *_strdup(char *str)
 {
-	char new;
-	int i, len;
+	char *new;
+	int i, len = 0;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; str != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		len++;
 	}
@@ -27,6 +28,7 @@ char *_strdup(char *str);
 	{
 		return (NULL);
 	}
+	i = 0;
 	for (i = 0; str[i]; i++)
 	{
 		new[i] = str[i];
