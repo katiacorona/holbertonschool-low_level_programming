@@ -12,11 +12,11 @@
  * elements of the structure.
  */
 typedef struct
-{
-	char *name;
-	float age;
-	char *owner;
-} dog;
+    {
+	    char *name;
+	    float age;
+	    char *owner;
+    } dog;
 
 /**
  * dog_t - new typedef for struct dog.
