@@ -11,9 +11,16 @@
  * Description: defines a new type struct dog and declares name, age and owner
  * elements of the structure.
  */
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-} dog;
+};
+
+/*
+ * dog - defines type dog of struct dog.
+ */
+typedef struct dog dog;
+
+#endif /* DOG_H */
