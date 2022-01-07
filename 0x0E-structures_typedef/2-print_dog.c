@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * print_dog - prints the struct dog.
+ * print_dog - prints a struct dog.
  *
- * @d: a pointer to the struct dog d.
+ * @d: a pointer to the struct to be printed.
  */
 void print_dog(struct dog *d)
 {
-	if (d == NULL)
+	if (!d)
 		return;
 	if (d->name == NULL)
 		printf("Name: (nil)\n");
