@@ -18,9 +18,4 @@ struct dog
 	char *owner;
 };
 
-/*
- * dog - defines type dog of struct dog.
- */
-typedef struct dog dog;
-
 #endif /* DOG_H */
