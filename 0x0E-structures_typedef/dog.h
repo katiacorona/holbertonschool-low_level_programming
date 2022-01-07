@@ -11,12 +11,12 @@
  * Description: defines a new type struct dog and declares name, age and owner
  * elements of the structure.
  */
-struct dog
+typedef struct
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} dog;
 
 /**
  * dog_t - new typedef for struct dog.
