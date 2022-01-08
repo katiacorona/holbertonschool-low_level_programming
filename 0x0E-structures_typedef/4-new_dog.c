@@ -2,22 +2,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int _strlen(char *s);
+int _strlen(char *str);
 
 char *_strcopy(char *dest, char *src);
 
 /**
  * _strlen - gets the lenght of a string.
  *
- * @s: a pointer to the string.
+ * @str: a pointer to the string.
  *
  * Return: the lenght of the string
  */
-int _strlen(char *s)
+int _strlen(char *str)
 {
 	int len = 0;
 
-	while (s[len])
+	while (*str++)
 		len++;
 
 	return (len);
@@ -41,7 +41,7 @@ char *_strcopy(char *dest, char *src)
 	for (i = 0; i < len; i++)
 		dest[i] = src[i];
 
-	dest[i] = src[i];
+	dest[i] = '\0';
 
 	return (dest);
 }
@@ -76,13 +76,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	doggie->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if (doggie->owner == NULL)
 	{
-		free(doggie);
 		free(doggie->name);
+		free(doggie);
 		return(NULL);
 	}
 
 	doggie->age = age;
-
 	doggie->name = _strcopy(doggie->name, name);
 	doggie->owner = _strcopy(doggie->owner, owner);
 
