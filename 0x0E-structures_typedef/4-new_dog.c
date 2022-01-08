@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 int _strlen(char *s);
@@ -6,28 +7,27 @@ int _strlen(char *s);
 char *_strcopy(char *dest, char *src);
 
 /**
- * _strlen - gets the lenght of a given string.
+ * _strlen - gets the lenght of a string.
  *
  * @s: a pointer to the string.
  *
- * Return: the lenght of the string.
+ * Return: the lenght of the string
  */
 int _strlen(char *s)
 {
 	int len = 0;
 
-	while (s[len] != '\0')
-	{
+	while (s[len])
 		len++;
-	}
+
 	return (len);
 }
 
 /**
- * _strcopy - copies a string pointed to by src into dest.
+ * _strcopy - copies the contents of src into dest.
  *
- * @dest: pointer to buffer where string will be copied.
- * @src: points to the string to be copied.
+ * @dest: a pointer to the buffer where src will be copied.
+ * @src: a pointer to the string to be copied.
  *
  * Return: a pointer to dest.
  */
@@ -35,13 +35,14 @@ char *_strcopy(char *dest, char *src)
 {
 	int len = 0, i;
 
-	while (src[len] != '\0')
+	while (src[len])
 		len++;
 
 	for (i = 0; i < len; i++)
 		dest[i] = src[i];
 
 	dest[i] = src[i];
+
 	return (dest);
 }
 
@@ -51,14 +52,14 @@ char *_strcopy(char *dest, char *src)
  * @name: a pointer to the dog's name.
  * @age: the dog's age.
  * @owner: a pointer to the owner's name.
- *
- * Return: 0 on success; NULL on failure.
+ * Return: a pointer to the new dog;
+ *			NULL if the function fails.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *doggie;
 
-	if (name == NULL || age < 0 || owner == NULL)
+	if (name == NULL || owner == NULL || age < 0)
 		return (NULL);
 
 	doggie = malloc(sizeof(dog_t));
@@ -69,15 +70,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (doggie->name == NULL)
 	{
 		free(doggie);
-		return (NULL);
+		return(NULL);
 	}
 
 	doggie->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if (doggie->owner == NULL)
 	{
-		free(doggie->name);
 		free(doggie);
-		return (NULL);
+		free(doggie->name);
+		return(NULL);
 	}
 
 	doggie->age = age;
