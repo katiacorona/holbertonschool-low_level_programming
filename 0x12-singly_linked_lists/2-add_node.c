@@ -32,10 +32,6 @@ list_t *add_node(list_t **head, const char *str)
 	new_node->len = len;
 	new_node->next = *head;
 	*head = new_node;
-	/*
-	 * El nuevo nodo es ahora el primer elemento en la lista; el nodo @head
-	 * ahora apunta a él.
-	 */
 
 	return (*head);
 }
