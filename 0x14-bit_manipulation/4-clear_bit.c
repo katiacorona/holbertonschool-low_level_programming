@@ -6,7 +6,7 @@
  * @n: a pointer to the number.
  * @index: the position of the bit.
  *
- * Return: 1 if it worked; -1 if an error occured;
+ * Return: 1 if it worked; -1 if an error occured.
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
