@@ -6,21 +6,21 @@
  *
  * @b: a pointer to a string of 0s and 1s.
  *
- * Return: the converted number;
- *		or return 0 if:
+ * Return: the converted number; return 0 if:
  *			chars in @b are other than 0 or 1.
  *			@b is NULL.
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int len;
-	unsigned int num = 0, mult = 1;
+	int len = 0;
+	unsigned int binary, decimal = 0, weight = 1;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
-	for (len = 0; b[len];)
+
+	while (b[len])
 	{
 		len++;
 	}
@@ -28,11 +28,15 @@ unsigned int binary_to_uint(const char *b)
 	for (len -= 1; len >= 0; len--)
 	{
 		if (b[len] != '0' && b[len] != '1')
-		{
 			return (0);
-		}
-		num += (b[len] - '0') * mult;
-		mult *= 2;
+
+		if (b[len] == '1')
+			binary = 1;
+		else
+			binary = 0;
+
+		decimal = decimal + (binary * weight);
+		weight *= 2;
 	}
-	return (num);
+	return (decimal);
 }
