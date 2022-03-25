@@ -7,8 +7,7 @@
  * @b: a pointer to a string of 0s and 1s.
  *
  * Return: the converted number; otherwise 0 if:
- *			chars in @b are other than 0 or 1.
- *			@b is NULL.
+ * chars in b are other than 0 or 1; or if b is NULL.
  */
 unsigned int binary_to_uint(const char *b)
 {
