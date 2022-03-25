@@ -1,11 +1,19 @@
 #include "main.h"
+<<<<<<< HEAD
+=======
+#include <stddef.h>
+>>>>>>> f983bccc5d5d7b34571879f7d00595cdc6ed132b
 
 /**
  * binary_to_uint - converts a binary number to an unsigned int.
  *
  * @b: a pointer to a string of 0s and 1s.
  *
+<<<<<<< HEAD
  * Return: the converted number; otherwise 0 if:
+=======
+ * Return: the converted number; return 0 if:
+>>>>>>> f983bccc5d5d7b34571879f7d00595cdc6ed132b
  *			chars in @b are other than 0 or 1.
  *			@b is NULL.
  */
@@ -15,6 +23,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int binary, decimal = 0, weight = 1;
 
 	if (b == NULL)
+<<<<<<< HEAD
 		return (0);
 
 	while (b[len])
@@ -31,6 +40,28 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 
 		decimal += (binary * weight);
+=======
+	{
+		return (0);
+	}
+
+	while (b[len])
+	{
+		len++;
+	}
+
+	for (len -= 1; len >= 0; len--)
+	{
+		if (b[len] != '0' && b[len] != '1')
+			return (0);
+
+		if (b[len] == '1')
+			binary = 1;
+		else
+			binary = 0;
+
+		decimal = decimal + (binary * weight);
+>>>>>>> f983bccc5d5d7b34571879f7d00595cdc6ed132b
 		weight *= 2;
 	}
 	return (decimal);

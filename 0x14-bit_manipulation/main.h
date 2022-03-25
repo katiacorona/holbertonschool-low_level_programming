@@ -1,7 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/*
+#include <stddef.h>
+
+/**
  * Directory 0x14. C - Bit Manipulation
  * Contents:	Includes function prototypes for tasks 0 to 5,
  *		including _putchar function.

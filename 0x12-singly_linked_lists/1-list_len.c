@@ -11,11 +11,22 @@ size_t list_len(const list_t *h)
 {
 	size_t nodes = 0;
 
+<<<<<<< HEAD
 	do
 	{
 		nodes++;
 		h = h->next;
 	} while (h);
+=======
+	while (h)
+	{
+		if (h->str != NULL)
+		{
+			nodes++;
+			h = h->next;
+		}
+	}
+>>>>>>> f983bccc5d5d7b34571879f7d00595cdc6ed132b
 
 	return (nodes);
 }
