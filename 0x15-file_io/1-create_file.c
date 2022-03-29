@@ -23,10 +23,9 @@ int create_file(const char *filename, char *text_content)
 	o = open(filename, O_TRUNC | O_RDWR | O_CREAT, S_IRUSR ^ S_IWUSR);
 	w = write(o, text_content, len);
 
-	if (o == -1 || w == -1 || filename == NULL || len == -1)
-	{
+	if (o == -1 || w == -1 || filename == NULL)
 		return (-1);
-	}
+
 	close(o);
 	return (1);
 }
