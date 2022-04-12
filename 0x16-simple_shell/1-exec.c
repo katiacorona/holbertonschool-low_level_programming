@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-    char *argv[] = {"/bin/ls", "/usr/games/", NULL};
+    char *argv[] = {"/bin/ls", "-1", "/usr/games/", NULL};
 
     printf("Before execve\n");
     if (execve(argv[0], argv, NULL) == -1)

@@ -15,15 +15,15 @@
 int main(int __attribute__((unused))ac, char __attribute__((unused))**av)
 {
 	char *line = NULL;
-	size_t bufsize = 50;
+	size_t bufsize = 0;
 
-	line = malloc(sizeof(char) * bufsize);
+	/* line = malloc(sizeof(char) * bufsize);
 	if (line == NULL)
 	{
 		printf("Error: Failed to allocate memory\n");
 		exit(1);
 	}
-
+	*/
 	printf("$ ");
 	getline(&line, &bufsize, stdin);
 	printf("%s", line);
