@@ -1,0 +1,32 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+# ignore executables
+/200-execve
+/mypid
+/strtok
+/fowaex
+/1-wait
+/prompt1
+/my_stat
+/getl
+/wait
+/1-ssshell
+/fork
+/my_fork
+/script
+/script_exec
+/prompt
+/exec
+/100-path
+/100-fork
+/av
+/execve
+/more_fork
+/myecho
+/myppid
+/pid_max
+/stat
