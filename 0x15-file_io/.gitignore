@@ -4,8 +4,9 @@
 # ignore ALL files in ANY directory named temp
 temp/
 
-#ignore ALL main files
+#ignore ALL main files and repeated functions
 *main.c
+*func.c # reviewed functions
 
 # ignore executables
 Requiescat
