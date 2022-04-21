@@ -1,0 +1,16 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+#ignore ALL main files
+*main.c
+
+# ignore executables
+Requiescat
+a
+b
+c
+hello
+incitatous
