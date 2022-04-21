@@ -6,7 +6,7 @@ temp/
 
 #ignore ALL main files and repeated functions
 *main.c
-*func.c # reviewed functions
+*func.c
 
 # ignore executables
 Requiescat
