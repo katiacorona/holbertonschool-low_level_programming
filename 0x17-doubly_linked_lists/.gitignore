@@ -9,6 +9,8 @@ test/
 # ignore main files
 *main.py
 *main.c
+7-main_2.c
+7-main_3.c
 *-
 00.py
 01.py
