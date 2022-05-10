@@ -3,8 +3,8 @@
 /**
  * delete_dnodeint_at_index - Delete a new node at a given position.
  *
- * @h: A pointer to the head node of the list.
- * @idx: The index of the node to be deleted.
+ * @head: A pointer to the head node of the list.
+ * @index: The index of the node to be deleted.
  *
  * Return: 1 if it succeeded, -1 if it failed.
  */
