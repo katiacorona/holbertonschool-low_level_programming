@@ -1,0 +1,7 @@
+# Makefile for 'school' executable; the 'all' rule builds 'school'. Variables:
+# CC: the compiler to be used.
+# SRC: the '.c' files.
+CC = gcc
+SRC = main.c school.c
+all: $(SRC)
+	$(CC) $(SRC) -o school
