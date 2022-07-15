@@ -1,0 +1,12 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+*__/
+
+# ignore main files
+a
+school
+main.o
+school.o
