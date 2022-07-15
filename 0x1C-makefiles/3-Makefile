@@ -1,0 +1,21 @@
+# Makefile for the executable 'school'; 'all' rule builds the executable and
+# recompiles only the updated source files. More rules: clean, oclean, fclean,
+# and re.
+CC=gcc
+SRC=main.c school.c
+OBJ=$(SRC:%.c=%.o)
+NAME=school
+RM=rm -f
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
